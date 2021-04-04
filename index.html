@@ -28,17 +28,38 @@
         <a href="#">Explore</a>
       </div>
       <ul class="social">
-        <li><img src="./1x/outline_facebook_black_24dp.png" alt="" /></li>
-        <li><img src="./1x/outline_facebook_black_24dp.png" alt="" /></li>
-        <li><img src="./1x/outline_facebook_black_24dp.png" alt="" /></li>
+        <li>
+          <a href="#">
+            <img src="./1x/outline_facebook_black_24dp.png" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./1x/outline_facebook_black_24dp.png" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./1x/outline_facebook_black_24dp.png" alt="" />
+          </a>
+        </li>
       </ul>
     </section>
     <div class="menu">
       <ul>
-        <li><a href="#"></a>Home</li>
-        <li><a href="#"></a>News</li>
-        <li><a href="#"></a>Destinations</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Destinations</a></li>
       </ul>
     </div>
+    <script>
+      const menuToggle = document.querySelector('.toggle');
+      const showcase = document.querySelector('.showcase');
+
+      menuToggle.addEventListener('click', function () {
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+      });
+    </script>
   </body>
 </html>
