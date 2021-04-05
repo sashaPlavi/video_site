@@ -11,6 +11,10 @@
     <section class="showcase">
       <header>
         <h2 class="logo">Travel</h2>
+        <div class="change-theme">
+          <h4>Change Theme</h4>
+          <div class="mode"></div>
+        </div>
         <div class="toggle"></div>
       </header>
 
@@ -55,10 +59,30 @@
     <script>
       const menuToggle = document.querySelector('.toggle');
       const showcase = document.querySelector('.showcase');
+      const toggleSlider = document.querySelector('.mode');
+      const overlay = document.querySelector('.overlay');
 
       menuToggle.addEventListener('click', function () {
         menuToggle.classList.toggle('active');
         showcase.classList.toggle('active');
+      });
+      let initialTheme = true;
+      toggleSlider.addEventListener('click', function () {
+        toggleSlider.classList.toggle('active');
+
+        if (initialTheme) {
+          document.documentElement.style.setProperty(
+            '--overlay-cloor1',
+            ' rgb(238, 238, 160)'
+          );
+          initialTheme = false;
+        } else {
+          document.documentElement.style.setProperty(
+            '--overlay-cloor1',
+            ' #97e6f0'
+          );
+          initialTheme = true;
+        }
       });
     </script>
   </body>

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 :root {
-  --overlay-cloor: #97e6f0;
+  --overlay-cloor1: #97e6f0;
 }
 * {
   margin: 0;
@@ -25,7 +25,7 @@
   z-index: 2;
 }
 .showcase.active {
-  right: 300px;
+  right: 250px;
 }
 .showcase header {
   position: absolute;
@@ -48,14 +48,38 @@
   height: 60px;
   background: url('./2x/outline_menu_white_24dp.png');
   background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: url('./2x/outline_close_white_24dp.png');
+  background-repeat: no-repeat;
   background-size: 30px;
   background-position: center;
   cursor: pointer;
 }
-.toggle.active {
-  background: url('./2x/outline_close_white_24dp.png');
+.change-theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mode {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url('./2x/outline_toggle_off_white_24dp.png');
   background-repeat: no-repeat;
-  background-size: 25px;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.mode.active {
+  background: url('./2x/outline_toggle_on_white_24dp.png');
+  background-repeat: no-repeat;
+  background-size: 30px;
   background-position: center;
   cursor: pointer;
 }
@@ -76,7 +100,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background: var(--overlay-cloor);
+  background: var(--overlay-cloor1);
   mix-blend-mode: overlay;
 }
 
@@ -140,7 +164,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 300px;
+  width: 250px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -156,7 +180,7 @@
   color: #111;
 }
 .menu ul li a:hover {
-  color: #97e6f0;
+  color: var(--overlay-cloor1);
 }
 
 @media (max-width: 791px) {
